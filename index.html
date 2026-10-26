@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Travel Insurance | YallaCompare</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yallapink: '#D81B60',
+                        yallapinkhover: '#C2185B',
+                        yallapinklight: '#FCE4EC',
+                        whatsappgreen: '#25D366'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .yalla-input:focus {
+            border-color: #D81B60;
+            box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.12);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7F9] text-[#1E293B] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-yallapink selection:text-white">
+
+    <!-- HEADER SECTION -->
+    <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-baseline space-x-1.5 group">
+                <span class="font-heading font-extrabold text-3xl sm:text-4xl tracking-tight text-[#2B3990]">yalla</span>
+                <span class="font-heading font-light text-3xl sm:text-4xl tracking-tight text-gray-500">compare</span>
+                <span class="hidden sm:inline-block text-[10px] text-gray-400 font-medium italic border-l border-gray-300 pl-2 ml-1">A Green Company</span>
+            </a>
+
+            <button onclick="toggleModal('Menu', 'Welcome to YallaCompare Travel Insurance Portal.')" 
+                    class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-gray-700 hover:border-yallapink hover:text-yallapink transition duration-200">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow py-8 sm:py-12 animate-fade-in">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight font-heading mb-8">
+                    Buy Travel Insurance
+                </h1>
+
+                <div class="max-w-3xl mx-auto px-2 mb-8 overflow-x-auto pb-2">
+                    <div class="relative flex items-center justify-between min-w-[550px]">
+                        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-200 -z-10"></div>
+                        <div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-yallapink transition-all duration-500 -z-10" style="width: 15%;"></div>
+
+                        <div class="flex flex-col items-center bg-[#F4F7F9] px-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-yallapink bg-yallapink text-white flex items-center justify-center font-bold text-xs shadow-md"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            <span class="text-[10px] font-bold text-gray-900 mt-1 uppercase">STEP 1</span>
+                            <span class="text-[11px] font-semibold text-yallapink">Travel Plan</span>
+                            <span class="text-[9px] text-yallapink font-medium">In progress</span>
+                        </div>
+
+                        <div class="flex flex-col items-center bg-[#F4F7F9] px-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-gray-300 bg-white text-gray-400 flex items-center justify-center font-bold text-xs">2</div>
+                            <span class="text-[10px] font-bold text-gray-400 mt-1 uppercase">STEP 2</span>
+                            <span class="text-[11px] font-medium text-gray-500">Age Range</span>
+                            <span class="text-[9px] text-gray-400">Pending</span>
+                        </div>
+
+                        <div class="flex flex-col items-center bg-[#F4F7F9] px-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-gray-300 bg-white text-gray-400 flex items-center justify-center font-bold text-xs">3</div>
+                            <span class="text-[10px] font-bold text-gray-400 mt-1 uppercase">STEP 3</span>
+                            <span class="text-[11px] font-medium text-gray-500">Trip Duration</span>
+                            <span class="text-[9px] text-gray-400">Pending</span>
+                        </div>
+
+                        <div class="flex flex-col items-center bg-[#F4F7F9] px-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-gray-300 bg-white text-gray-400 flex items-center justify-center font-bold text-xs">4</div>
+                            <span class="text-[10px] font-bold text-gray-400 mt-1 uppercase">STEP 4</span>
+                            <span class="text-[11px] font-medium text-gray-500">Package</span>
+                            <span class="text-[9px] text-gray-400">Pending</span>
+                        </div>
+
+                        <div class="flex flex-col items-center bg-[#F4F7F9] px-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-gray-300 bg-white text-gray-400 flex items-center justify-center font-bold text-xs">5</div>
+                            <span class="text-[10px] font-bold text-gray-400 mt-1 uppercase">STEP 5</span>
+                            <span class="text-[11px] font-medium text-gray-500">Details</span>
+                            <span class="text-[9px] text-gray-400">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-12 border border-gray-200/80 shadow-sm mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <div class="lg:col-span-4">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+                            Travel plan<br>details
+                        </h2>
+                        <p class="text-xs text-gray-500 mt-3">The asterisk (*) next to travel destinations indicates Schengen-approved locations.</p>
+                    </div>
+
+                    <div class="lg:col-span-8">
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">First Name*</label>
+                                    <input type="text" required id="firstName" placeholder="First Name" 
+                                        class="yalla-input w-full px-4 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Last Name*</label>
+                                    <input type="text" required id="lastName" placeholder="Last Name" 
+                                        class="yalla-input w-full px-4 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">E-mail*</label>
+                                    <input type="email" required id="email" placeholder="name@example.com" 
+                                        class="yalla-input w-full px-4 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Mobile Number*</label>
+                                    <div class="flex items-center rounded-xl border border-gray-300 overflow-hidden focus-within:border-yallapink focus-within:ring-2 focus-within:ring-yallapink/20 bg-gray-50/50">
+                                        <div class="bg-gray-100 px-4 py-3.5 border-r border-gray-200 flex items-center space-x-2 text-sm font-bold text-gray-700">
+                                            <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="w-5 h-3.5 rounded-sm object-cover shadow-sm">
+                                            <span>+971</span>
+                                        </div>
+                                        <input type="tel" required id="mobile" placeholder="50 123 4567" pattern="[0-9]{8,10}"
+                                            class="w-full px-4 py-3.5 outline-none text-sm text-gray-900 font-medium bg-transparent">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Travel Destination*</label>
+                                    <select required id="destination" class="yalla-input w-full px-4 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50 text-gray-700">
+                                        <option value="">Select...</option>
+                                        <option value="Worldwide">Worldwide</option>
+                                        <option value="Europe (Sichengen)*">Europe (Sichengen)*</option>
+                                        <option value="USA & Canada">USA & Canada</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Date of Birth*</label>
+                                    <input type="date" required id="dob" 
+                                        class="yalla-input w-full px-4 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50 text-gray-700">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Trip Duration*</label>
+                                <select required id="duration" class="yalla-input w-full px-4 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50 text-gray-700">
+                                    <option value="">Select...</option>
+                                    <option value="1-7 Days">1-7 Days</option>
+                                    <option value="8-14 Days">8-14 Days</option>
+                                    <option value="Annual Multi-Trip">Annual Multi-Trip</option>
+                                </select>
+                            </div>
+
+                            <div class="flex items-center justify-end pt-4">
+                                <button type="submit" class="px-10 py-3.5 rounded-full bg-yallapink hover:bg-yallapinkhover text-white font-bold text-xs tracking-wider uppercase shadow-md transition transform active:scale-95 flex items-center space-x-2">
+                                    <span>NEXT</span>
+                                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- NEWSLETTER -->
+        <section class="border-t border-b border-gray-200 bg-white py-12 my-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Newsletter</span>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight font-heading">Stay in touch</h3>
+                    </div>
+                    <div class="md:col-span-7">
+                        <p class="text-xs text-gray-500 font-medium mb-3">Subscribe to our newsletter and stay updated.</p>
+                        <form onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" required id="newsletterEmail" placeholder="EMAIL" 
+                                class="yalla-input flex-grow px-5 py-3.5 rounded-xl border border-gray-300 outline-none text-sm font-medium bg-gray-50/50">
+                            <button type="submit" class="bg-yallapink hover:bg-yallapinkhover text-white font-bold px-8 py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-md transition whitespace-nowrap">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RATINGS -->
+        <section class="bg-white py-6 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:text-left items-center">
+                    <div class="col-span-2 md:col-span-1 border-b md:border-b-0 md:border-r border-gray-200 pb-4 md:pb-0">
+                        <span class="text-xs font-bold uppercase text-gray-400 tracking-wider block mb-1">We are rated</span>
+                        <div class="flex items-center justify-center md:justify-start space-x-2">
+                            <span class="text-xl font-black text-gray-900">4.5/5</span>
+                            <div class="text-yallapink text-xs flex space-x-0.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div><span class="text-lg font-extrabold text-gray-900 block flex items-center justify-center md:justify-start"><i class="fa-brands fa-google text-blue-500 mr-1.5 text-base"></i> 35,903</span><span class="text-xs text-gray-500 font-medium">Google Reviews</span></div>
+                    <div><span class="text-lg font-extrabold text-gray-900 block">35+</span><span class="text-xs text-gray-500 font-medium">Insurance Partners</span></div>
+                    <div><span class="text-lg font-extrabold text-gray-900 block">2+ Million</span><span class="text-xs text-gray-500 font-medium">Trusted Customers</span></div>
+                    <div><span class="text-lg font-extrabold text-gray-900 block">4+ Million</span><span class="text-xs text-gray-500 font-medium">Policies Sold</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#F8FAFC] pt-16 pb-12 border-t border-gray-200 text-gray-600 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+                <div class="col-span-2">
+                    <a href="#" class="inline-flex items-center space-x-1 font-heading font-extrabold text-2xl tracking-tight mb-3">
+                        <span class="text-[#2B3990]">yalla</span><span class="text-yallapink">Compare</span>
+                    </a>
+                    <p class="text-gray-500 leading-relaxed mb-4 pr-4">YallaCompare.com is the leading finance comparison site in Abu Dhabi, Dubai, and the Middle East.</p>
+                    <p class="text-gray-500 font-medium mb-1">YallaCompare, United Arab Emirates (UAE)</p>
+                    <p class="text-base font-extrabold text-gray-900 mb-6">+971 45 622 100</p>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="bg-black text-white px-3.5 py-2 rounded-xl flex items-center space-x-2"><i class="fa-brands fa-apple text-lg"></i><div class="text-[9px] leading-tight text-left"><span class="text-gray-400">Download on the</span><br><strong class="text-xs font-semibold">App Store</strong></div></a>
+                        <a href="#" class="bg-black text-white px-3.5 py-2 rounded-xl flex items-center space-x-2"><i class="fa-brands fa-google-play text-base"></i><div class="text-[9px] leading-tight text-left"><span class="text-gray-400">GET IT ON</span><br><strong class="text-xs font-semibold">Google Play</strong></div></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-4 text-[11px]">QUICK LINKS</h4>
+                    <ul class="space-y-2.5 text-gray-500 font-medium">
+                        <li><a href="#" class="hover:text-yallapink transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-4 text-[11px]">FINANCE PRODUCTS</h4>
+                    <ul class="space-y-2.5 text-gray-500 font-medium">
+                        <li><a href="#" class="hover:text-yallapink transition">Credit Cards</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Personal Loans</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Bank Accounts</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Guide to Investing</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">List of Banks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-4 text-[11px]">INSURANCE</h4>
+                    <ul class="space-y-2.5 text-gray-500 font-medium">
+                        <li><a href="#" class="hover:text-yallapink transition">Car Insurance</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Health Insurance</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">International Health</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Travel Insurance</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Life Insurance</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Home Insurance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-4 text-[11px]">TOOLS</h4>
+                    <ul class="space-y-2.5 text-gray-500 font-medium">
+                        <li><a href="#" class="hover:text-yallapink transition">Car Loan Calculator</a></li>
+                        <li><a href="#" class="hover:text-yallapink transition">Mortgage Calculator UAE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400">
+                <p>© 2026 YallaCompare. All Rights Reserved.</p>
+                <div class="flex items-center space-x-3.5 mt-4 md:mt-0">
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-yallapink text-yallapink flex items-center justify-center hover:bg-yallapink hover:text-white transition"><i class="fa-brands fa-facebook-f text-sm font-bold"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-yallapink text-yallapink flex items-center justify-center hover:bg-yallapink hover:text-white transition"><i class="fa-brands fa-x-twitter text-sm font-bold"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-yallapink text-yallapink flex items-center justify-center hover:bg-yallapink hover:text-white transition"><i class="fa-brands fa-linkedin-in text-sm font-bold"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-yallapink text-yallapink flex items-center justify-center hover:bg-yallapink hover:text-white transition"><i class="fa-brands fa-youtube text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-yallapink text-yallapink flex items-center justify-center hover:bg-yallapink hover:text-white transition"><i class="fa-brands fa-instagram text-sm font-bold"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LEGAL DISCLAIMER FOOTER -->
+    <section class="bg-[#EEF2F6] text-gray-600 text-[11px] leading-relaxed py-10 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div>
+                <h5 class="font-bold text-gray-800 text-xs mb-1">YallaCompare, United Arab Emirates</h5>
+                <p>Information found on YallaCompare is provided for illustrative purposes only, rates are subject to change based on your personal circumstances.</p>
+                <p>You should always speak to a trained professional before taking out any form of finance.</p>
+                <p>Implications of non-payment: If you fail to keep up with repayments on your finance, your bank may file a report with the UAE credit rating agency which may impact your ability to borrow from UAE banks in the future.</p>
+            </div>
+            <div class="font-bold text-gray-900 tracking-wide uppercase text-[11.5px]">YOUR HOME MAY BE REPOSSESSED IF YOU DO NOT KEEP UP REPAYMENTS ON A MORTGAGE, LOAN OR ANY OTHER DEBT SECURED ON IT.</div>
+            <p class="text-gray-500 italic">Insurance is provided by YallaCompare Insurance Broker LLC (formerly Gulf Resources Insurance Management Services Limited).</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-gray-300/60">
+                <div>
+                    <h6 class="font-extrabold text-gray-800 text-xs uppercase tracking-wider">UAE - Federal Level</h6>
+                    <p class="text-gray-600">Licensed and regulated by the</p>
+                    <p class="font-bold text-gray-900">Central Bank of the UAE | Registration No. 20</p>
+                </div>
+                <div>
+                    <h6 class="font-extrabold text-gray-800 text-xs uppercase tracking-wider">DUBAI</h6>
+                    <p class="text-gray-600 font-medium">Department of Economy & Tourism</p>
+                    <p class="text-gray-600">Dubai - Head Office</p>
+                    <p class="text-gray-600">Trade License issued by Department of Economy & Tourism in Dubai</p>
+                    <p class="font-bold text-gray-900">Licence No. 235006</p>
+                    <p class="text-gray-600 pt-1">Health Insurance intermediary Permit issued by Dubai Health Authority ID:</p>
+                    <p class="font-bold text-gray-900">BRK-00045</p>
+                    <p class="text-gray-600 pt-1">Member of the Emirates Insurance Federation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center space-x-3">
+        <a href="https://wa.me/97145622100" target="_blank" class="bg-whatsappgreen hover:bg-emerald-600 text-white px-5 py-3 rounded-full shadow-2xl flex items-center space-x-2.5 transition transform hover:scale-105">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span class="text-xs font-extrabold tracking-wide hidden sm:inline-block">Talk to an expert</span>
+        </a>
+        <button onclick="toggleModal('Account', 'Sign in to access your profile.')" class="w-12 h-12 rounded-full bg-yallapink hover:bg-yallapinkhover text-white flex items-center justify-center shadow-2xl transition transform hover:scale-105">
+            <i class="fa-solid fa-user text-sm"></i>
+        </button>
+    </div>
+
+    <!-- MODAL -->
+    <div id="infoModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-yallapinklight text-yallapink flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="modalTitle" class="text-xl font-extrabold text-gray-900 mb-2">Notification</h3>
+            <p id="modalBody" class="text-sm text-gray-600 mb-6 leading-relaxed"></p>
+            <button onclick="closeModal()" class="w-full bg-yallapink hover:bg-yallapinkhover text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">CLOSE</button>
+        </div>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('firstName').value;
+            toggleModal('Success!', `Thank you ${name}! Your Travel Insurance details have been received.`);
+        }
+        function handleNewsletter(event) {
+            event.preventDefault();
+            toggleModal('Subscribed!', 'Thank you for subscribing to our newsletter.');
+            document.getElementById('newsletterEmail').value = '';
+        }
+        function toggleModal(title, text) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerText = text;
+            document.getElementById('infoModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
